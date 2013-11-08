@@ -2,7 +2,10 @@
 
 def get_middle(s, start, end):
     import re
-    return re.search(re.escape(start) + '(.*?)' + re.escape(end), s).group(1)
+    try:
+        return re.search(re.escape(start) + '(.*?)' + re.escape(end), s).group(1)
+    except:
+        return 'no-data'
 
 def make_url(movie_id):
     return 'http://www.imdb.com/title/{mid}'.format(
