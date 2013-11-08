@@ -18,7 +18,7 @@ def get_rating(source):
     return get_middle(source, '<span itemprop="ratingValue">', '</span>')
 
 def get_title(source):
-    return get_middle(source, '<span class="itemprop" itemprop="name">','</span>
+    return get_middle(source, '<span class="itemprop" itemprop="name">','</span>')
 
 def get_release(source):
     return get_middle(source, '<meta itemprop="datePublished" content="','" />')
