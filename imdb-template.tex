@@ -1,0 +1,29 @@
+\documentclass[
+  a4paper,
+  12pt
+]{article}
+
+\usepackage[
+  hmargin=2.4cm,
+  vmargin=3cm
+]{geometry}
+\usepackage{amssymb}
+\usepackage{enumitem} % better to use enumitem
+\usepackage{totcount}
+\usepackage[
+  colorlinks=true,
+  urlcolor=black
+]{hyperref}
+
+\newcommand*\film[4]{%
+ \item[\refstepcounter{enumi}\textcolor{blue}{$\maltese$} \textsf{[#4]}] \textsf{\href{#1}{#2}~(#3)}}  
+
+\regtotcounter{enumi}
+
+\begin{document}
+\begin{enumerate}[leftmargin=5em,labelindent=-5em]
+%! FILMDATA !%
+\end{enumerate}
+
+I have \total{enumi}~films.
+\end{document}
