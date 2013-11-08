@@ -7,6 +7,7 @@ install:
 
 demo:
 	./imdb.py $(TEMPLATE) $(DEMOIDS)
+	make tex
 
 grab:
 	./imdb.py $(TEMPLATE) $(DEMOIDS) $(IDS)
