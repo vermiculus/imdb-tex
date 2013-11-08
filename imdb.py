@@ -36,7 +36,10 @@ This function should not delete the marker line.
 
     marker_line = file_lines.index(marker)
 
-    source = get_source(movie_id)
+    try:
+        source = get_source(movie_id)
+    except:
+        return
     data = '\\film{%s}{%s}{%s}{%s}\n' % (
         make_url(movie_id),
         get_title(source),
