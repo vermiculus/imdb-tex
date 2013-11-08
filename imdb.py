@@ -55,11 +55,9 @@ def main():
     import sys
     file_name = sys.argv[1]
     for movie_id in sys.argv[2:]:
+        print 'Inserting title', movie_id, '...'
         insert(movie_id, file_name)
+        print 'Done.'
 
 if __name__ == '__main__':
-    import sys
-    print 'Welcome.'
-    print 'Inserting data for {}'.format(str(sys.argv[2:]))
     main()
-    print 'Done.'
